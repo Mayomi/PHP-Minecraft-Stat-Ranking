@@ -1,5 +1,5 @@
 <?php
- include "info.php";
+include('config.php'); 
 ?>
 <div align="center">
 &copy; <strong><?php echo $mc_name; ?></strong> 2016. All rights reserved.<br>

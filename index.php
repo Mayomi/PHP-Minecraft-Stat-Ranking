@@ -1,5 +1,5 @@
 <?php 
-include('/inc/info.php'); 
+include('/inc/config.php'); 
 ?>
 <!DOCTYPE html>
 <html lang="zh">

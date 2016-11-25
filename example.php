@@ -1,7 +1,6 @@
 <?php 
 require_once '/inc/db-settings.php';
 include('/inc/config.php'); 
-include('/inc/info.php'); 
 
 /* 修改当前页面的名称 */
 $game_name = "演示页面";

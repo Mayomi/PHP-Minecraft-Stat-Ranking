@@ -22,7 +22,6 @@ Credits - 感谢
   config.php - 页面自定义配置
   db-settings.php - 数据库连接配置
   footer.php - 页脚信息 - 无需配置
-  info.php - 服务器信息配置
 example.php - 演示页面
 index.php - 欢迎页面
 ```
@@ -30,7 +29,7 @@ index.php - 欢迎页面
 config.php - 页面自定义配置
 ==========================
 支持配置以下内容：
-排名数字自定义内容 / 玩家名称自定义内容 / 头像获取API地址
+排名数字自定义内容 / 玩家名称自定义内容 / 头像获取API地址 / 服务器信息等等
 
 db-settings.php - 数据库连接配置
 ==============================
@@ -39,18 +38,6 @@ $host = "localhost";
 $username = "root";
 $password = "root";
 $database = "test";
-```
-
-info.php - 服务器信息配置
-========================
-```
-$mc_name = '服务器名称';
-$mc_desc = '我的第一个服务器';
-$mc_beian = '火星ICP备XXXXXXXX号-1';
-$mc_website = 'http://www.xxx.cn';
-$mc_main_1 = '欢迎来到';
-$mc_main_2 = '服务器排行榜.';
-$mc_main_desc = '这里你可以看到各个小游戏名列前茅的玩家名单.';
 ```
 
 Bootsrap - 关于框架

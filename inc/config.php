@@ -32,7 +32,7 @@ function ranking($ranking){
 #		       玩家列自定义               #
 ###########################################
 
-/* 玩家头像显示 1为显示 2为隐藏 */
+/* 玩家头像显示 1为显示 0为隐藏 */
 
 $player_avatar = "1";
 
@@ -58,4 +58,17 @@ function verify($username){
 ###########################################
 $avatar_api = "https://mcapi.ca/avatar/";
 /*  如果API服务器宕机 这是备用的API地址 https://minotar.net/avatar/  */
+
+
+###########################################
+#		       各种信息设置               #
+###########################################
+
+$mc_name = "服务器名称";
+$mc_desc = "我的第一个服务器";
+$mc_beian = "火星ICP备XXXXXXXX号-1";
+$mc_website = "http://www.xxx.cn";
+$mc_main_1 = "欢迎来到";
+$mc_main_2 = "服务器排行榜.";
+$mc_main_desc = "这里你可以看到各个小游戏名列前茅的玩家名单.";
 ?>
