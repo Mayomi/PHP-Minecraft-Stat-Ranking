@@ -3,13 +3,17 @@ require_once '/inc/db-settings.php';
 include('/inc/config.php'); 
 
 /* 修改当前页面的名称 */
-$game_name = "演示页面";
+$page_name = "演示页面";
+/* 修改获取的表单名称 */
+$page_table= "bt_pvp_overall";
+/* 修改排序的列的名称 */
+$page_rank = "Elo";
 ?>
 <!DOCTYPE html>
 <html lang="zh">
 	<head>
 		<meta charset="UTF-8">
-		<title><?php echo $game_name; ?> - <?php echo $mc_name; ?> - <?php echo $mc_desc; ?></title>
+		<title><?php echo $page_name; ?> - <?php echo $global_name; ?> - <?php echo $global_desc; ?></title>
 		<link rel='stylesheet' href='css/bootstrap.css'> 
 		<link rel="shortcut icon" href="img/favicon.ico">
 	</head>
@@ -22,7 +26,7 @@ $game_name = "演示页面";
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<a class="navbar-brand" href="<?php echo $mc_website; ?>"><?php echo $mc_name; ?></a>
+					<a class="navbar-brand" href="<?php echo $global_website; ?>"><?php echo $global_name; ?></a>
 				</div>
 				
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -31,7 +35,7 @@ $game_name = "演示页面";
 						<li><a href="index.php">主页</a></li>
 					</ul>
 					<ul class="nav navbar-nav">
-						<li class="active"><a href="example.php"><?php echo $game_name; ?></a></li>
+						<li class="active"><a href="example.php"><?php echo $page_name; ?></a></li>
 					</ul>
 					<!-- [可以随意增加导航栏] -->
 					
@@ -46,7 +50,7 @@ $game_name = "演示页面";
 		<div class="container" style="margin-top: 80px">
 			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><?php echo $game_name; ?> - <?php echo $player_number; ?> 强玩家</h3>
+					<h3 class="panel-title"><?php echo $page_name; ?> - <?php echo $player_number; ?> 强玩家</h3>
 				</div>
 				
 				<table class="table table-striped table-hover ">
@@ -66,19 +70,17 @@ $game_name = "演示页面";
 					<tbody>
 						<?php
 							$index = 1;
-							/* Rank_Table 为需要获取的表单名称 */
-							/* Kills 为根据Kills的值来排序 */
-							$query = $db->query("SELECT * FROM Rank_Table ORDER BY Kills DESC LIMIT 0,".$player_number, PDO::FETCH_ASSOC);
+							$query = $db->query("SELECT * FROM ".$page_table." ORDER BY ".$page_rank." DESC LIMIT 0,".$player_number, PDO::FETCH_ASSOC);
 							if ( $query->rowCount() ){
 								foreach( $query as $row ){
 									/* $row["xxx"] xxx为表的名称 根据数据库内容自行修改*/
 									
 									/* Name 为玩家的名称 请根据表单来修改 区分大小写 */
-									$head = ($player_avatar == "1") ? '<img src='.$avatar_api.$row["Name"].'/20>' : null ;
+									$player_avatar_icon = ($player_avatar == "1") ? '<img src='.$player_avatar_api.$row["Name"].'/20>' : null ;
 									echo "<tr>";
 									echo "<td>".ranking($index++)."</td>";
 									/* Name 为玩家的名称 请根据表单来修改 区分大小写 */
-									echo "<td>".$head." ".verify($row["Name"])."</td>";
+									echo "<td>".$player_avatar_icon." ".verify($row["Name"])."</td>";
 									echo "<td>".$row["Elo"]."</td>";
 									echo "<td>".$row["maxElo"]."</td>";
 									/* 格式与以下相同即可 

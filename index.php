@@ -5,7 +5,7 @@ include('/inc/config.php');
 <html lang="zh">
 	<head>
 		<meta charset="UTF-8">
-		<title><?php echo $mc_name; ?> - <?php echo $mc_desc; ?></title>
+		<title><?php echo $global_name; ?> - <?php echo $global_desc; ?></title>
 		<link rel='stylesheet' href='css/bootstrap.css'> 
 		<link rel="shortcut icon" href="img/favicon.ico">
 	</head>
@@ -18,7 +18,7 @@ include('/inc/config.php');
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="<?php echo $mc_website; ?>"><?php echo $mc_name; ?></a>
+				<a class="navbar-brand" href="<?php echo $global_website; ?>"><?php echo $global_name; ?></a>
 			</div>
 			
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -42,10 +42,10 @@ include('/inc/config.php');
 		<div class="container">
 			<div class="jumbotron">
 				<div style="text-align: center;">
-					<h2><?php echo $mc_main_1; ?> <?php echo $mc_name; ?> <?php echo $mc_main_2; ?></h2>
+					<h2><?php echo $global_main_1; ?> <?php echo $global_name; ?> <?php echo $global_main_2; ?></h2>
 				</div>
 
-				<div style="text-align: center;"><p><?php echo $mc_main_desc; ?></p></div>
+				<div style="text-align: center;"><p><?php echo $global_main_desc; ?></p></div>
 			</div>
 		</div>
 	<?php require("inc/footer.php");?>
