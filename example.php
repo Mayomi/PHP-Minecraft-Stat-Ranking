@@ -47,7 +47,7 @@ $game_name = "演示页面";
 		<div class="container" style="margin-top: 80px">
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"><?php echo $game_name; ?> 前 <?php echo $set["table_limit"]; ?> 名玩家</h3>
+					<h3 class="panel-title"><?php echo $game_name; ?> 前 <?php echo $player_number; ?> 名玩家</h3>
 				</div>
 				
 				<table class="table table-striped table-hover ">
