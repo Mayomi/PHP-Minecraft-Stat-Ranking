@@ -1,5 +1,17 @@
 <?php  
 ###########################################
+#		       各种信息设置               #
+###########################################
+
+$global_name = "服务器名称";
+$global_desc = "我的第一个服务器";
+$global_beian = "火星ICP备XXXXXXXX号-1";
+$global_website = "http://www.xxx.cn";
+$global_main_1 = "欢迎来到";
+$global_main_2 = "服务器排行榜.";
+$global_main_desc = "这里你可以看到各个小游戏名列前茅的玩家名单.";
+
+###########################################
 #		       排名列自定义               #
 ###########################################
 
@@ -8,8 +20,8 @@
 $player_number = "25";
 
 /* 排名高亮显示 */
-
-function ranking($ranking){
+if (!function_exists('ranking')) {
+	function ranking($ranking){
 		switch ($ranking) {
 			/* 当排名为 1 时 高亮显示 */
 			case 1:
@@ -26,14 +38,17 @@ function ranking($ranking){
 			default:
 			return $ranking;
 			}
+	}
 };
+
 
 ###########################################
 #		       玩家列自定义               #
 ###########################################
 
 /* 玩家认证显示 */
-function verify($username){
+if (!function_exists('verify')) {
+	function verify($username){
 		switch ($username) {
 			/* 检测名字为 Mayomi 名称颜色改为红色并增加个官方认证图标 */
 			case 'Mayomi':
@@ -46,6 +61,7 @@ function verify($username){
 			default:
 			return $username;
 			}
+	}
 };
 
 
@@ -61,16 +77,4 @@ $player_avatar = "1";
 
 $player_avatar_api = "https://mcapi.ca/avatar/";
 
-
-###########################################
-#		       各种信息设置               #
-###########################################
-
-$global_name = "服务器名称";
-$global_desc = "我的第一个服务器";
-$global_beian = "火星ICP备XXXXXXXX号-1";
-$global_website = "http://www.xxx.cn";
-$global_main_1 = "欢迎来到";
-$global_main_2 = "服务器排行榜.";
-$global_main_desc = "这里你可以看到各个小游戏名列前茅的玩家名单.";
 ?>
