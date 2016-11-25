@@ -32,10 +32,6 @@ function ranking($ranking){
 #		       玩家列自定义               #
 ###########################################
 
-/* 玩家头像显示 1为显示 0为隐藏 */
-
-$player_avatar = "1";
-
 /* 玩家认证显示 */
 function verify($username){
 		switch ($username) {
@@ -47,17 +43,23 @@ function verify($username){
 			case 'Xiao_Lins':
 				return '<font color=#458B74><b>'.$username.'</b></font> <img src="img/zb.png" height="20" width="20" title="认证主播" />';
 				break;
-
 			default:
 			return $username;
 			}
 };
 
+
 ###########################################
-#		       玩家头像 API               #
+#		       玩家头像相关               #
 ###########################################
-$avatar_api = "https://mcapi.ca/avatar/";
+
+/* 玩家头像显示 1为显示 0为隐藏 */
+
+$player_avatar = "1";
+
 /*  如果API服务器宕机 这是备用的API地址 https://minotar.net/avatar/  */
+
+$avatar_api = "https://mcapi.ca/avatar/";
 
 
 ###########################################

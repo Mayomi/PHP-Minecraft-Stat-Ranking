@@ -44,9 +44,9 @@ $game_name = "演示页面";
 
 	
 		<div class="container" style="margin-top: 80px">
-			<div class="panel panel-primary">
+			<div class="panel panel-success">
 				<div class="panel-heading">
-					<h3 class="panel-title"><?php echo $game_name; ?> 前 <?php echo $player_number; ?> 名玩家</h3>
+					<h3 class="panel-title"><?php echo $game_name; ?> - <?php echo $player_number; ?> 强玩家</h3>
 				</div>
 				
 				<table class="table table-striped table-hover ">
@@ -68,7 +68,7 @@ $game_name = "演示页面";
 							$index = 1;
 							/* Rank_Table 为需要获取的表单名称 */
 							/* Kills 为根据Kills的值来排序 */
-							$query = $db->query("SELECT * FROM Rank_Table ORDER BY Kills DESC LIMIT 0,".$player_number, PDO::FETCH_ASSOC);
+							$query = $db->query("SELECT * FROM bt_pvp_overall ORDER BY Elo DESC LIMIT 0,".$player_number, PDO::FETCH_ASSOC);
 							if ( $query->rowCount() ){
 								foreach( $query as $row ){
 									/* $row["xxx"] xxx为表的名称 根据数据库内容自行修改*/
