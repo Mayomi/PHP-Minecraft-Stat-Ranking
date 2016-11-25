@@ -5,5 +5,5 @@
 &copy; <strong><?php echo $mc_name; ?></strong> 2016. All rights reserved.<br>
 <a href="http://www.miitbeian.gov.cn/" target="_blank"><?php echo $mc_beian; ?></a>
 </div>
-<script src="js/jquery-2.2.4.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.1.1/core.js"></script>
+<script src="//cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css"></script>

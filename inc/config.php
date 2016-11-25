@@ -3,16 +3,23 @@
 #		       排名列自定义               #
 ###########################################
 
+/* 显示排名数量 25为显示前25名玩家*/
+
+$player_number = "25";
+
+/* 排名高亮显示 */
+
 function ranking($ranking){
 		switch ($ranking) {
 			/* 当排名为 1 时 高亮显示 */
 			case 1:
 				return '<font color=#FF000><b>1</b></font>';
 				break;
-
+			/* 当排名为 2 时 高亮显示 */
 			case 2:
 				return '<font color=#3333FF><b>2</b></font>';
 				break;
+			/* 当排名为 3 时 高亮显示 */
 			case 3:
 				return '<font color=#996600><b>3</b></font>';
 				break;
@@ -25,6 +32,11 @@ function ranking($ranking){
 #		       玩家列自定义               #
 ###########################################
 
+/* 玩家头像显示 1为显示 2为隐藏 */
+
+$player_avatar = "1";
+
+/* 玩家认证显示 */
 function verify($username){
 		switch ($username) {
 			/* 检测名字为 Mayomi 名称颜色改为红色并增加个官方认证图标 */

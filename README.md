@@ -23,9 +23,6 @@ Credits - 感谢
   db-settings.php - 数据库连接配置
   footer.php - 页脚信息 - 无需配置
   info.php - 服务器信息配置
-- js
-  bootstrap.min.js
-  jquery-2.2.4.min.js
 example.php - 演示页面
 index.php - 欢迎页面
 ```
@@ -38,15 +35,10 @@ config.php - 页面自定义配置
 db-settings.php - 数据库连接配置
 ==============================
 ```
-$set = array(
-	'table_limit' => '25' /* 显示前多少名 */,
-	'mysql' => array(
-		'host' => 'localhost',
-		'username' => 'root',
-		'password' => 'root',
-		'database' => 'test',
-	)
-);
+$host = "localhost";
+$username = "root";
+$password = "root";
+$database = "test";
 ```
 
 info.php - 服务器信息配置
