@@ -1,6 +1,6 @@
 <?php 
-require_once '/inc/db-settings.php';
-include('/inc/config.php'); 
+require_once 'inc/db-settings.php';
+include('inc/config.php'); 
 
 /* 修改当前页面的名称 */
 $page_name = "演示页面";
