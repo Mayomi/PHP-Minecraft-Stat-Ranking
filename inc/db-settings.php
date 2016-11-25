@@ -15,7 +15,7 @@ try {
      $db->query("SET CHARACTER SET utf8");
 } catch ( PDOException $e ){
      print $e->getMessage();
-     die('数据库无法访问: ' . mysql_error());
+     die();
 }
 
 ?>
