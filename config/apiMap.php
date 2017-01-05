@@ -1,11 +1,16 @@
 <?php
 /**
+ * API地图配置
+ *
  * Created by PhpStorm.
  * User: 蒋天蓓
  * Date: 2017/1/5 0005
  * Time: 16:06
  */
 return [
+    //方法名称index
+    //对应链接 http://站点地址/api/ajax.php?m=index
+    //返回数据 默认方法调用！
     'index' => [
         'sql' => 'SELECT "默认方法调用！"'
     ],

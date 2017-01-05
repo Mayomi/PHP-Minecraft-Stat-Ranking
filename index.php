@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh">
-<?php require("inc/header.php"); ?>
 <body>
+<?php require("inc/header.php"); ?>
 <div class="container">
     <div class="jumbotron">
         <div style="text-align: center;">

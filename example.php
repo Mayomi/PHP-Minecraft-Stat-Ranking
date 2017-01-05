@@ -1,13 +1,10 @@
 <?php
 /* 修改当前页面的名称 */
 $page_name = "演示页面";
-/* 修改获取的表单名称 */
-$page_table = "bt_pvp_overall";
-/* 修改排序的列的名称 */
-$page_rank = "Elo";
 ?>
 <!DOCTYPE html>
 <html lang="zh">
+<body>
 <?php require("inc/header.php"); ?>
 <div class="container">
     <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
@@ -41,33 +38,39 @@ $page_rank = "Elo";
     </div>
     <script type="text/javascript">
         var chart = echarts.init(document.getElementById('main'));
+        //序列名称
+        var seriesname = '人数';
+        //============== 勿动 ===================
         // 显示标题，图例和空的坐标轴
         chart.setOption({
             title: {
-                text: '段位分布'
+                text: '<?php echo $page_name; ?>'
             },
             tooltip: {},
             legend: {
-                data: ['人数']
+                data: [seriesname]
             },
             xAxis: {
                 data: []
             },
             yAxis: {},
             series: [{
-                name: '人数',
+                name: seriesname,
                 type: 'bar',
                 data: []
             }]
         });
+        //============== 勿动 ===================
         var main = avalon.define({
             $id: 'main',
             data: [],
+            //用于载入Table数据 动态渲染
             loadTable: function () {
                 $.get('/api/ajax.php?m=stat', function (result) {
                     main.data = result.data;
                 });
             },
+            //用于载入图标数据 动态渲染
             loadCharts: function () {
                 $.get('/api/ajax.php?m=section', function (result) {
                     var categories = [];
@@ -84,7 +87,7 @@ $page_rank = "Elo";
                         },
                         series: [{
                             // 根据名字对应到相应的系列
-                            name: '人数',
+                            name: seriesname,
                             data: series
                         }]
                     });

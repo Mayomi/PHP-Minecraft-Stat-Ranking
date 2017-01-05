@@ -1,10 +1,13 @@
 <?php
+
 /**
+ * 数据处理接口类 已经封装 勿动！！！
+ * 配置数据请查看 /config/apiMap.php
+ * 配置数据库请查看 /config/database.php
  * Created by PhpStorm.
  * User: 蒋天蓓
  * Date: 2017/1/5 0005
  * Time: 15:21
- * @method static stat();
  */
 class Data {
     public static function __callStatic($name, $args) {

@@ -6,8 +6,8 @@
  * Time: 15:48
  */
 return [
-    'host' => 'localhost',
-    'dbname' => 'test',
-    'username' => 'root',
-    'password' => 'root'
+    'host' => 'localhost',//数据库地址 如果端口不是3306 则 localhost:端口
+    'dbname' => 'test',//数据库名称
+    'username' => 'root',//用户
+    'password' => 'root'//密码
 ];
