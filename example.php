@@ -6,14 +6,15 @@ $page_name = "演示页面";
 <html lang="zh">
 <body>
 <?php require("inc/header.php"); ?>
-<div class="container">
+<div class="container ms-controller" :controller="main">
+    <div class="alert alert-info text-center" :if="@data.length==0"><h2>数据载入中。。。</h2></div>
     <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-    <div id="main" class="col-md-12" style="height:400px;"></div>
-    <div class="panel panel-success">
+    <div id="main" class="col-md-12" style="height:400px;" :visible="@data.length!=0"></div>
+    <div class="col-md-12 panel panel-success" :visible="@data.length!=0">
         <div class="panel-heading">
-            <h3 class="panel-title"><?php echo $page_name; ?> - <?php echo $player_number; ?> 强玩家</h3>
+            <h3 class="panel-title"><?php echo $page_name; ?> - {{@data.length}} 强玩家</h3>
         </div>
-        <table class="table table-striped table-hover ms-controller" :controller="main">
+        <table class="table table-striped table-hover">
             <thead>
             <tr>
                 <!-- [可以随意增加导航栏] -->

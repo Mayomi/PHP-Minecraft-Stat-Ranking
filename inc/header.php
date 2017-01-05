@@ -7,7 +7,11 @@
  * Date: 2017/1/5 0005
  * Time: 16:01
  */
-include('../config/config.php');
+if (is_file("config/base.php")) {
+    require_once('config/base.php');
+} elseif (is_file("../config/base.php")) {
+    require_once('../config/base.php');
+}
 ?>
 <head>
     <meta charset="UTF-8">
